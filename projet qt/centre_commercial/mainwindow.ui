@@ -1,0 +1,258 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>800</width>
+    <height>600</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <widget class="QTabWidget" name="tabWidget">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>0</y>
+      <width>781</width>
+      <height>481</height>
+     </rect>
+    </property>
+    <property name="currentIndex">
+     <number>1</number>
+    </property>
+    <widget class="QWidget" name="Clients">
+     <property name="enabled">
+      <bool>true</bool>
+     </property>
+     <attribute name="title">
+      <string>Magasins</string>
+     </attribute>
+     <widget class="QWidget" name="verticalLayoutWidget">
+      <property name="geometry">
+       <rect>
+        <x>30</x>
+        <y>60</y>
+        <width>71</width>
+        <height>331</height>
+       </rect>
+      </property>
+      <layout class="QVBoxLayout" name="Magasin_inputs">
+       <item>
+        <widget class="QLabel" name="ID_Magasin">
+         <property name="text">
+          <string>ID :</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QLabel" name="Nom_Magasin">
+         <property name="text">
+          <string>Nom :</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QLabel" name="Categorie">
+         <property name="text">
+          <string>Categorie :</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QLabel" name="Location">
+         <property name="text">
+          <string>Location :</string>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+     <widget class="QWidget" name="verticalLayoutWidget_2">
+      <property name="geometry">
+       <rect>
+        <x>100</x>
+        <y>40</y>
+        <width>81</width>
+        <height>381</height>
+       </rect>
+      </property>
+      <layout class="QVBoxLayout" name="Magasin_inputs_2">
+       <item>
+        <widget class="QLineEdit" name="ID_Mag"/>
+       </item>
+       <item>
+        <widget class="QLineEdit" name="Nom_Mag"/>
+       </item>
+       <item>
+        <widget class="QLineEdit" name="Categorie_Mag"/>
+       </item>
+       <item>
+        <widget class="QLineEdit" name="Location_Mag"/>
+       </item>
+      </layout>
+     </widget>
+    </widget>
+    <widget class="QWidget" name="Magasin">
+     <attribute name="title">
+      <string>Clients</string>
+     </attribute>
+     <widget class="QWidget" name="verticalLayoutWidget_3">
+      <property name="geometry">
+       <rect>
+        <x>40</x>
+        <y>60</y>
+        <width>91</width>
+        <height>351</height>
+       </rect>
+      </property>
+      <layout class="QVBoxLayout" name="Client_inputs">
+       <item>
+        <widget class="QLabel" name="ID_Client">
+         <property name="text">
+          <string>ID :</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QLabel" name="Nom_Client">
+         <property name="text">
+          <string>Nom :</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QLabel" name="Prenom">
+         <property name="text">
+          <string>Prenom :</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QLabel" name="Sexe">
+         <property name="text">
+          <string>Sexe :</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QLabel" name="Email">
+         <property name="text">
+          <string>Email :</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QLabel" name="Num_tel">
+         <property name="text">
+          <string>Numero Tel :</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QLabel" name="Point_fid">
+         <property name="text">
+          <string>Points Fidelite :</string>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+     <widget class="QWidget" name="verticalLayoutWidget_4">
+      <property name="geometry">
+       <rect>
+        <x>130</x>
+        <y>50</y>
+        <width>81</width>
+        <height>371</height>
+       </rect>
+      </property>
+      <layout class="QVBoxLayout" name="Client_inputs_2">
+       <item>
+        <widget class="QLineEdit" name="ID_cli"/>
+       </item>
+       <item>
+        <widget class="QLineEdit" name="Nom_Cli"/>
+       </item>
+       <item>
+        <widget class="QLineEdit" name="Prenom_Cli"/>
+       </item>
+       <item>
+        <widget class="QLineEdit" name="Sexe_Cli"/>
+       </item>
+       <item>
+        <widget class="QLineEdit" name="Email_Cli"/>
+       </item>
+       <item>
+        <widget class="QLineEdit" name="Num_tel_Cli"/>
+       </item>
+       <item>
+        <widget class="QLineEdit" name="Point_fid_Cli"/>
+       </item>
+      </layout>
+     </widget>
+     <widget class="QPushButton" name="pushButton">
+      <property name="geometry">
+       <rect>
+        <x>370</x>
+        <y>390</y>
+        <width>93</width>
+        <height>28</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Valider</string>
+      </property>
+     </widget>
+     <widget class="QTabWidget" name="tabWidget_2">
+      <property name="geometry">
+       <rect>
+        <x>380</x>
+        <y>70</y>
+        <width>321</width>
+        <height>251</height>
+       </rect>
+      </property>
+      <property name="currentIndex">
+       <number>1</number>
+      </property>
+      <widget class="QWidget" name="tab">
+       <attribute name="title">
+        <string>Tab 1</string>
+       </attribute>
+      </widget>
+      <widget class="QWidget" name="tab_2">
+       <attribute name="title">
+        <string>Tab 2</string>
+       </attribute>
+      </widget>
+     </widget>
+    </widget>
+   </widget>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>800</width>
+     <height>26</height>
+    </rect>
+   </property>
+   <widget class="QMenu" name="menuCentre_Commercial">
+    <property name="title">
+     <string>Centre Commercial</string>
+    </property>
+   </widget>
+   <addaction name="menuCentre_Commercial"/>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
