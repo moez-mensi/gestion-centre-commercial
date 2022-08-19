@@ -24,7 +24,10 @@ private slots:
 
     void on_Supp_Mag_btn_clicked();
 
+    void on_refresh_clicked();
+
 private:
     Ui::MainWindow *ui;
+    Magasins mtmp;
 };
 #endif // MAINWINDOW_H

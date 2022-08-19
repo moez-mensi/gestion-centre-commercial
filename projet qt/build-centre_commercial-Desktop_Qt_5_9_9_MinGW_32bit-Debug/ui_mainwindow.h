@@ -74,6 +74,7 @@ public:
     QWidget *tab_2;
     QTableView *tableView;
     QPushButton *pdf_btn;
+    QPushButton *refresh;
     QWidget *tab_3;
     QWidget *tab_4;
     QWidget *tab_5;
@@ -293,6 +294,9 @@ public:
         pdf_btn = new QPushButton(tab_2);
         pdf_btn->setObjectName(QStringLiteral("pdf_btn"));
         pdf_btn->setGeometry(QRect(290, 340, 131, 41));
+        refresh = new QPushButton(tab_2);
+        refresh->setObjectName(QStringLiteral("refresh"));
+        refresh->setGeometry(QRect(530, 290, 131, 41));
         Tabs_Mag->addTab(tab_2, QString());
         tab_3 = new QWidget();
         tab_3->setObjectName(QStringLiteral("tab_3"));
@@ -502,7 +506,7 @@ public:
         retranslateUi(MainWindow);
 
         tabWidget->setCurrentIndex(0);
-        Tabs_Mag->setCurrentIndex(0);
+        Tabs_Mag->setCurrentIndex(1);
         Tabs_Cli->setCurrentIndex(0);
 
 
@@ -528,6 +532,7 @@ public:
         ID_Magasin_3->setText(QApplication::translate("MainWindow", "ID :", Q_NULLPTR));
         Tabs_Mag->setTabText(Tabs_Mag->indexOf(tab), QApplication::translate("MainWindow", "Supprimer", Q_NULLPTR));
         pdf_btn->setText(QApplication::translate("MainWindow", "Enregistrer en pdf", Q_NULLPTR));
+        refresh->setText(QApplication::translate("MainWindow", "Refresh", Q_NULLPTR));
         Tabs_Mag->setTabText(Tabs_Mag->indexOf(tab_2), QApplication::translate("MainWindow", "Afficher", Q_NULLPTR));
         Tabs_Mag->setTabText(Tabs_Mag->indexOf(tab_3), QApplication::translate("MainWindow", "Tri", Q_NULLPTR));
         Tabs_Mag->setTabText(Tabs_Mag->indexOf(tab_4), QApplication::translate("MainWindow", "Recherche", Q_NULLPTR));
