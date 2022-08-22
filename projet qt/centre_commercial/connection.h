@@ -6,6 +6,8 @@
 #include <QSqlQuery>
 class Connection
 {
+private:
+    QSqlDatabase db;
 public:
     Connection();
 

@@ -1,6 +1,11 @@
 #ifndef CLIENTS_H
 #define CLIENTS_H
 #include <QString>
+#include <QSqlQuery>
+#include <QSqlDatabase>
+#include <QSqlQueryModel>
+
+
 
 class Clients
 {
@@ -12,6 +17,8 @@ private:
     QString email;
     int num_tel;
     int pts_fid;
+
+    //int,QString,QString,QString,QString,int,int
 
 
 public:
@@ -37,6 +44,13 @@ public:
 
     int Getpts_fid() { return pts_fid;};
         void Setpts_fid(int pts){ pts_fid=pts;};
+
+        //CRUD
+        bool Ajouter(int,QString,QString,QString,QString,int,int);
+        bool Modifier(int,QString,QString,QString,QString,int,int);
+        bool Supprimer(int);
+        QSqlQueryModel* Afficher();
+
 
 
 };
