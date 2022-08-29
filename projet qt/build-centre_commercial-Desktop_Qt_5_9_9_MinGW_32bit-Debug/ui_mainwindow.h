@@ -13,6 +13,7 @@
 #include <QtWidgets/QAction>
 #include <QtWidgets/QApplication>
 #include <QtWidgets/QButtonGroup>
+#include <QtWidgets/QGroupBox>
 #include <QtWidgets/QHeaderView>
 #include <QtWidgets/QLabel>
 #include <QtWidgets/QLineEdit>
@@ -49,6 +50,7 @@ public:
     QLabel *Nom_Magasin_2;
     QLabel *Categorie_2;
     QLabel *Location_2;
+    QPushButton *Ajout_Mag_btn_2;
     QWidget *Modif_Mag;
     QWidget *verticalLayoutWidget_2;
     QVBoxLayout *Magasin_inputs_2;
@@ -74,52 +76,74 @@ public:
     QWidget *tab_2;
     QTableView *tableView;
     QPushButton *pdf_btn;
-    QPushButton *refresh;
     QWidget *tab_3;
+    QGroupBox *groupBox_5;
+    QTableView *tableView_tri;
+    QPushButton *pushButton_TriASC;
+    QPushButton *pushButton_TriDESC;
+    QPushButton *pushButton_3;
     QWidget *tab_4;
+    QLineEdit *lineEdit_rechercher;
+    QPushButton *rechercher;
+    QTableView *tableView_rechercher;
     QWidget *tab_5;
+    QPushButton *pushButton_6;
     QWidget *Magasin;
-    QTabWidget *Tabs_Cli;
-    QWidget *Ajout_Cli;
-    QWidget *verticalLayoutWidget_5;
-    QVBoxLayout *Client_inputs_3;
-    QLineEdit *ID_cli_2;
-    QLineEdit *Nom_Cli_2;
-    QLineEdit *Prenom_Cli_2;
-    QLineEdit *Sexe_Cli_2;
-    QLineEdit *Email_Cli_2;
-    QLineEdit *Num_tel_Cli_2;
-    QLineEdit *Point_fid_Cli_2;
-    QPushButton *Ajout_Cli_btn;
-    QWidget *verticalLayoutWidget_6;
-    QVBoxLayout *Client_inputs_4;
-    QLabel *ID_Client_2;
-    QLabel *Nom_Client_2;
-    QLabel *Prenom_2;
-    QLabel *Sexe_2;
-    QLabel *Email_2;
-    QLabel *Num_tel_2;
-    QLabel *Point_fid_2;
-    QWidget *Modif_Cli;
-    QPushButton *Modif_Cli_btn;
-    QWidget *verticalLayoutWidget_4;
-    QVBoxLayout *Client_inputs_2;
-    QLineEdit *ID_cli;
-    QLineEdit *Nom_Cli;
-    QLineEdit *Prenom_Cli;
-    QLineEdit *Sexe_Cli;
-    QLineEdit *Email_Cli;
-    QLineEdit *Num_tel_Cli;
-    QLineEdit *Point_fid_Cli;
-    QWidget *verticalLayoutWidget_3;
-    QVBoxLayout *Client_inputs;
-    QLabel *ID_Client;
-    QLabel *Nom_Client;
-    QLabel *Prenom;
-    QLabel *Sexe;
-    QLabel *Email;
-    QLabel *Num_tel;
-    QLabel *Point_fid;
+    QTabWidget *Tabs_Clts;
+    QWidget *Ajout_Mag_5;
+    QPushButton *on_Ajout_Mag_btn_5_clicked;
+    QWidget *verticalLayoutWidget_15;
+    QVBoxLayout *Magasin_inputs_31;
+    QLabel *ID_Magasin_16;
+    QLabel *Nom_Magasin_11;
+    QLabel *Categorie_14;
+    QLabel *Categorie_15;
+    QLabel *Categorie_16;
+    QLabel *Categorie_17;
+    QLabel *Location_11;
+    QWidget *verticalLayoutWidget_16;
+    QVBoxLayout *Magasin_inputs_32;
+    QLineEdit *ID_Mag_11;
+    QLineEdit *Nom_Mag_11;
+    QLineEdit *Categorie_Mag_14;
+    QLineEdit *Categorie_Mag_15;
+    QLineEdit *Categorie_Mag_16;
+    QLineEdit *Categorie_Mag_17;
+    QLineEdit *Location_Mag_16;
+    QWidget *Modif_Mag_5;
+    QWidget *verticalLayoutWidget_9;
+    QVBoxLayout *Magasin_inputs_27;
+    QLineEdit *ID_Mag_10;
+    QLineEdit *Nom_Mag_10;
+    QLineEdit *Categorie_Mag_10;
+    QLineEdit *Categorie_Mag_11;
+    QLineEdit *Categorie_Mag_12;
+    QLineEdit *Categorie_Mag_13;
+    QLineEdit *Location_Mag_14;
+    QWidget *verticalLayoutWidget_10;
+    QVBoxLayout *Magasin_inputs_28;
+    QLabel *ID_Magasin_14;
+    QLabel *Nom_Magasin_10;
+    QLabel *Categorie_10;
+    QLabel *Categorie_12;
+    QLabel *Categorie_13;
+    QLabel *Categorie_11;
+    QLabel *Location_10;
+    QPushButton *Modif_Mag_btn_5;
+    QWidget *tab_21;
+    QPushButton *Supp_Mag_btn_5;
+    QWidget *verticalLayoutWidget_29;
+    QVBoxLayout *Magasin_inputs_29;
+    QLabel *ID_Magasin_15;
+    QWidget *verticalLayoutWidget_30;
+    QVBoxLayout *Magasin_inputs_30;
+    QLineEdit *Location_Mag_15;
+    QWidget *tab_22;
+    QTableView *tableView_5;
+    QPushButton *pdf_btn_5;
+    QWidget *tab_23;
+    QWidget *tab_24;
+    QWidget *tab_25;
     QMenuBar *menubar;
     QMenu *menuCentre_Commercial;
     QStatusBar *statusbar;
@@ -133,7 +157,7 @@ public:
         centralwidget->setObjectName(QStringLiteral("centralwidget"));
         tabWidget = new QTabWidget(centralwidget);
         tabWidget->setObjectName(QStringLiteral("tabWidget"));
-        tabWidget->setGeometry(QRect(10, 0, 781, 551));
+        tabWidget->setGeometry(QRect(10, 10, 781, 551));
         Clients = new QWidget();
         Clients->setObjectName(QStringLiteral("Clients"));
         Clients->setEnabled(true);
@@ -199,12 +223,15 @@ public:
 
         Magasin_inputs_3->addWidget(Location_2);
 
+        Ajout_Mag_btn_2 = new QPushButton(Ajout_Mag);
+        Ajout_Mag_btn_2->setObjectName(QStringLiteral("Ajout_Mag_btn_2"));
+        Ajout_Mag_btn_2->setGeometry(QRect(460, 140, 93, 28));
         Tabs_Mag->addTab(Ajout_Mag, QString());
         Modif_Mag = new QWidget();
         Modif_Mag->setObjectName(QStringLiteral("Modif_Mag"));
         verticalLayoutWidget_2 = new QWidget(Modif_Mag);
         verticalLayoutWidget_2->setObjectName(QStringLiteral("verticalLayoutWidget_2"));
-        verticalLayoutWidget_2->setGeometry(QRect(170, 10, 81, 381));
+        verticalLayoutWidget_2->setGeometry(QRect(110, 10, 81, 381));
         Magasin_inputs_2 = new QVBoxLayout(verticalLayoutWidget_2);
         Magasin_inputs_2->setObjectName(QStringLiteral("Magasin_inputs_2"));
         Magasin_inputs_2->setContentsMargins(0, 0, 0, 0);
@@ -230,7 +257,7 @@ public:
 
         verticalLayoutWidget = new QWidget(Modif_Mag);
         verticalLayoutWidget->setObjectName(QStringLiteral("verticalLayoutWidget"));
-        verticalLayoutWidget->setGeometry(QRect(100, 30, 71, 331));
+        verticalLayoutWidget->setGeometry(QRect(40, 30, 71, 331));
         Magasin_inputs = new QVBoxLayout(verticalLayoutWidget);
         Magasin_inputs->setObjectName(QStringLiteral("Magasin_inputs"));
         Magasin_inputs->setContentsMargins(0, 0, 0, 0);
@@ -294,201 +321,277 @@ public:
         pdf_btn = new QPushButton(tab_2);
         pdf_btn->setObjectName(QStringLiteral("pdf_btn"));
         pdf_btn->setGeometry(QRect(290, 340, 131, 41));
-        refresh = new QPushButton(tab_2);
-        refresh->setObjectName(QStringLiteral("refresh"));
-        refresh->setGeometry(QRect(530, 290, 131, 41));
         Tabs_Mag->addTab(tab_2, QString());
         tab_3 = new QWidget();
         tab_3->setObjectName(QStringLiteral("tab_3"));
+        groupBox_5 = new QGroupBox(tab_3);
+        groupBox_5->setObjectName(QStringLiteral("groupBox_5"));
+        groupBox_5->setGeometry(QRect(20, 20, 601, 331));
+        groupBox_5->setStyleSheet(QStringLiteral("color: rgb(0, 0, 0);"));
+        tableView_tri = new QTableView(groupBox_5);
+        tableView_tri->setObjectName(QStringLiteral("tableView_tri"));
+        tableView_tri->setGeometry(QRect(20, 80, 461, 191));
+        pushButton_TriASC = new QPushButton(groupBox_5);
+        pushButton_TriASC->setObjectName(QStringLiteral("pushButton_TriASC"));
+        pushButton_TriASC->setGeometry(QRect(40, 30, 93, 28));
+        pushButton_TriDESC = new QPushButton(groupBox_5);
+        pushButton_TriDESC->setObjectName(QStringLiteral("pushButton_TriDESC"));
+        pushButton_TriDESC->setGeometry(QRect(180, 30, 93, 28));
+        pushButton_3 = new QPushButton(groupBox_5);
+        pushButton_3->setObjectName(QStringLiteral("pushButton_3"));
+        pushButton_3->setGeometry(QRect(490, 290, 93, 28));
         Tabs_Mag->addTab(tab_3, QString());
         tab_4 = new QWidget();
         tab_4->setObjectName(QStringLiteral("tab_4"));
+        lineEdit_rechercher = new QLineEdit(tab_4);
+        lineEdit_rechercher->setObjectName(QStringLiteral("lineEdit_rechercher"));
+        lineEdit_rechercher->setGeometry(QRect(70, 60, 113, 22));
+        lineEdit_rechercher->setMaxLength(8);
+        rechercher = new QPushButton(tab_4);
+        rechercher->setObjectName(QStringLiteral("rechercher"));
+        rechercher->setGeometry(QRect(190, 50, 93, 31));
+        rechercher->setStyleSheet(QStringLiteral("color: rgb(0, 0, 0);"));
+        tableView_rechercher = new QTableView(tab_4);
+        tableView_rechercher->setObjectName(QStringLiteral("tableView_rechercher"));
+        tableView_rechercher->setGeometry(QRect(70, 90, 451, 192));
         Tabs_Mag->addTab(tab_4, QString());
         tab_5 = new QWidget();
         tab_5->setObjectName(QStringLiteral("tab_5"));
+        pushButton_6 = new QPushButton(tab_5);
+        pushButton_6->setObjectName(QStringLiteral("pushButton_6"));
+        pushButton_6->setGeometry(QRect(200, 100, 151, 23));
+        pushButton_6->setStyleSheet(QStringLiteral("color: rgb(0, 0, 0);"));
         Tabs_Mag->addTab(tab_5, QString());
         tabWidget->addTab(Clients, QString());
         Magasin = new QWidget();
         Magasin->setObjectName(QStringLiteral("Magasin"));
-        Tabs_Cli = new QTabWidget(Magasin);
-        Tabs_Cli->setObjectName(QStringLiteral("Tabs_Cli"));
-        Tabs_Cli->setGeometry(QRect(60, 40, 671, 431));
-        Ajout_Cli = new QWidget();
-        Ajout_Cli->setObjectName(QStringLiteral("Ajout_Cli"));
-        verticalLayoutWidget_5 = new QWidget(Ajout_Cli);
-        verticalLayoutWidget_5->setObjectName(QStringLiteral("verticalLayoutWidget_5"));
-        verticalLayoutWidget_5->setGeometry(QRect(130, 10, 81, 371));
-        Client_inputs_3 = new QVBoxLayout(verticalLayoutWidget_5);
-        Client_inputs_3->setObjectName(QStringLiteral("Client_inputs_3"));
-        Client_inputs_3->setContentsMargins(0, 0, 0, 0);
-        ID_cli_2 = new QLineEdit(verticalLayoutWidget_5);
-        ID_cli_2->setObjectName(QStringLiteral("ID_cli_2"));
+        Tabs_Clts = new QTabWidget(Magasin);
+        Tabs_Clts->setObjectName(QStringLiteral("Tabs_Clts"));
+        Tabs_Clts->setGeometry(QRect(20, 30, 701, 431));
+        Tabs_Clts->setTabShape(QTabWidget::Triangular);
+        Tabs_Clts->setTabsClosable(false);
+        Ajout_Mag_5 = new QWidget();
+        Ajout_Mag_5->setObjectName(QStringLiteral("Ajout_Mag_5"));
+        on_Ajout_Mag_btn_5_clicked = new QPushButton(Ajout_Mag_5);
+        on_Ajout_Mag_btn_5_clicked->setObjectName(QStringLiteral("on_Ajout_Mag_btn_5_clicked"));
+        on_Ajout_Mag_btn_5_clicked->setGeometry(QRect(410, 360, 93, 28));
+        verticalLayoutWidget_15 = new QWidget(Ajout_Mag_5);
+        verticalLayoutWidget_15->setObjectName(QStringLiteral("verticalLayoutWidget_15"));
+        verticalLayoutWidget_15->setGeometry(QRect(50, 40, 71, 331));
+        Magasin_inputs_31 = new QVBoxLayout(verticalLayoutWidget_15);
+        Magasin_inputs_31->setObjectName(QStringLiteral("Magasin_inputs_31"));
+        Magasin_inputs_31->setContentsMargins(0, 0, 0, 0);
+        ID_Magasin_16 = new QLabel(verticalLayoutWidget_15);
+        ID_Magasin_16->setObjectName(QStringLiteral("ID_Magasin_16"));
 
-        Client_inputs_3->addWidget(ID_cli_2);
+        Magasin_inputs_31->addWidget(ID_Magasin_16);
 
-        Nom_Cli_2 = new QLineEdit(verticalLayoutWidget_5);
-        Nom_Cli_2->setObjectName(QStringLiteral("Nom_Cli_2"));
+        Nom_Magasin_11 = new QLabel(verticalLayoutWidget_15);
+        Nom_Magasin_11->setObjectName(QStringLiteral("Nom_Magasin_11"));
 
-        Client_inputs_3->addWidget(Nom_Cli_2);
+        Magasin_inputs_31->addWidget(Nom_Magasin_11);
 
-        Prenom_Cli_2 = new QLineEdit(verticalLayoutWidget_5);
-        Prenom_Cli_2->setObjectName(QStringLiteral("Prenom_Cli_2"));
+        Categorie_14 = new QLabel(verticalLayoutWidget_15);
+        Categorie_14->setObjectName(QStringLiteral("Categorie_14"));
 
-        Client_inputs_3->addWidget(Prenom_Cli_2);
+        Magasin_inputs_31->addWidget(Categorie_14);
 
-        Sexe_Cli_2 = new QLineEdit(verticalLayoutWidget_5);
-        Sexe_Cli_2->setObjectName(QStringLiteral("Sexe_Cli_2"));
+        Categorie_15 = new QLabel(verticalLayoutWidget_15);
+        Categorie_15->setObjectName(QStringLiteral("Categorie_15"));
 
-        Client_inputs_3->addWidget(Sexe_Cli_2);
+        Magasin_inputs_31->addWidget(Categorie_15);
 
-        Email_Cli_2 = new QLineEdit(verticalLayoutWidget_5);
-        Email_Cli_2->setObjectName(QStringLiteral("Email_Cli_2"));
+        Categorie_16 = new QLabel(verticalLayoutWidget_15);
+        Categorie_16->setObjectName(QStringLiteral("Categorie_16"));
 
-        Client_inputs_3->addWidget(Email_Cli_2);
+        Magasin_inputs_31->addWidget(Categorie_16);
 
-        Num_tel_Cli_2 = new QLineEdit(verticalLayoutWidget_5);
-        Num_tel_Cli_2->setObjectName(QStringLiteral("Num_tel_Cli_2"));
+        Categorie_17 = new QLabel(verticalLayoutWidget_15);
+        Categorie_17->setObjectName(QStringLiteral("Categorie_17"));
 
-        Client_inputs_3->addWidget(Num_tel_Cli_2);
+        Magasin_inputs_31->addWidget(Categorie_17);
 
-        Point_fid_Cli_2 = new QLineEdit(verticalLayoutWidget_5);
-        Point_fid_Cli_2->setObjectName(QStringLiteral("Point_fid_Cli_2"));
+        Location_11 = new QLabel(verticalLayoutWidget_15);
+        Location_11->setObjectName(QStringLiteral("Location_11"));
 
-        Client_inputs_3->addWidget(Point_fid_Cli_2);
+        Magasin_inputs_31->addWidget(Location_11);
 
-        Ajout_Cli_btn = new QPushButton(Ajout_Cli);
-        Ajout_Cli_btn->setObjectName(QStringLiteral("Ajout_Cli_btn"));
-        Ajout_Cli_btn->setGeometry(QRect(370, 350, 93, 28));
-        verticalLayoutWidget_6 = new QWidget(Ajout_Cli);
-        verticalLayoutWidget_6->setObjectName(QStringLiteral("verticalLayoutWidget_6"));
-        verticalLayoutWidget_6->setGeometry(QRect(40, 20, 91, 351));
-        Client_inputs_4 = new QVBoxLayout(verticalLayoutWidget_6);
-        Client_inputs_4->setObjectName(QStringLiteral("Client_inputs_4"));
-        Client_inputs_4->setContentsMargins(0, 0, 0, 0);
-        ID_Client_2 = new QLabel(verticalLayoutWidget_6);
-        ID_Client_2->setObjectName(QStringLiteral("ID_Client_2"));
+        verticalLayoutWidget_16 = new QWidget(Ajout_Mag_5);
+        verticalLayoutWidget_16->setObjectName(QStringLiteral("verticalLayoutWidget_16"));
+        verticalLayoutWidget_16->setGeometry(QRect(120, 30, 81, 361));
+        Magasin_inputs_32 = new QVBoxLayout(verticalLayoutWidget_16);
+        Magasin_inputs_32->setObjectName(QStringLiteral("Magasin_inputs_32"));
+        Magasin_inputs_32->setContentsMargins(0, 0, 0, 0);
+        ID_Mag_11 = new QLineEdit(verticalLayoutWidget_16);
+        ID_Mag_11->setObjectName(QStringLiteral("ID_Mag_11"));
 
-        Client_inputs_4->addWidget(ID_Client_2);
+        Magasin_inputs_32->addWidget(ID_Mag_11);
 
-        Nom_Client_2 = new QLabel(verticalLayoutWidget_6);
-        Nom_Client_2->setObjectName(QStringLiteral("Nom_Client_2"));
+        Nom_Mag_11 = new QLineEdit(verticalLayoutWidget_16);
+        Nom_Mag_11->setObjectName(QStringLiteral("Nom_Mag_11"));
 
-        Client_inputs_4->addWidget(Nom_Client_2);
+        Magasin_inputs_32->addWidget(Nom_Mag_11);
 
-        Prenom_2 = new QLabel(verticalLayoutWidget_6);
-        Prenom_2->setObjectName(QStringLiteral("Prenom_2"));
+        Categorie_Mag_14 = new QLineEdit(verticalLayoutWidget_16);
+        Categorie_Mag_14->setObjectName(QStringLiteral("Categorie_Mag_14"));
 
-        Client_inputs_4->addWidget(Prenom_2);
+        Magasin_inputs_32->addWidget(Categorie_Mag_14);
 
-        Sexe_2 = new QLabel(verticalLayoutWidget_6);
-        Sexe_2->setObjectName(QStringLiteral("Sexe_2"));
+        Categorie_Mag_15 = new QLineEdit(verticalLayoutWidget_16);
+        Categorie_Mag_15->setObjectName(QStringLiteral("Categorie_Mag_15"));
 
-        Client_inputs_4->addWidget(Sexe_2);
+        Magasin_inputs_32->addWidget(Categorie_Mag_15);
 
-        Email_2 = new QLabel(verticalLayoutWidget_6);
-        Email_2->setObjectName(QStringLiteral("Email_2"));
+        Categorie_Mag_16 = new QLineEdit(verticalLayoutWidget_16);
+        Categorie_Mag_16->setObjectName(QStringLiteral("Categorie_Mag_16"));
 
-        Client_inputs_4->addWidget(Email_2);
+        Magasin_inputs_32->addWidget(Categorie_Mag_16);
 
-        Num_tel_2 = new QLabel(verticalLayoutWidget_6);
-        Num_tel_2->setObjectName(QStringLiteral("Num_tel_2"));
+        Categorie_Mag_17 = new QLineEdit(verticalLayoutWidget_16);
+        Categorie_Mag_17->setObjectName(QStringLiteral("Categorie_Mag_17"));
 
-        Client_inputs_4->addWidget(Num_tel_2);
+        Magasin_inputs_32->addWidget(Categorie_Mag_17);
 
-        Point_fid_2 = new QLabel(verticalLayoutWidget_6);
-        Point_fid_2->setObjectName(QStringLiteral("Point_fid_2"));
+        Location_Mag_16 = new QLineEdit(verticalLayoutWidget_16);
+        Location_Mag_16->setObjectName(QStringLiteral("Location_Mag_16"));
 
-        Client_inputs_4->addWidget(Point_fid_2);
+        Magasin_inputs_32->addWidget(Location_Mag_16);
 
-        Tabs_Cli->addTab(Ajout_Cli, QString());
-        Modif_Cli = new QWidget();
-        Modif_Cli->setObjectName(QStringLiteral("Modif_Cli"));
-        Modif_Cli_btn = new QPushButton(Modif_Cli);
-        Modif_Cli_btn->setObjectName(QStringLiteral("Modif_Cli_btn"));
-        Modif_Cli_btn->setGeometry(QRect(360, 350, 93, 28));
-        verticalLayoutWidget_4 = new QWidget(Modif_Cli);
-        verticalLayoutWidget_4->setObjectName(QStringLiteral("verticalLayoutWidget_4"));
-        verticalLayoutWidget_4->setGeometry(QRect(120, 10, 81, 371));
-        Client_inputs_2 = new QVBoxLayout(verticalLayoutWidget_4);
-        Client_inputs_2->setObjectName(QStringLiteral("Client_inputs_2"));
-        Client_inputs_2->setContentsMargins(0, 0, 0, 0);
-        ID_cli = new QLineEdit(verticalLayoutWidget_4);
-        ID_cli->setObjectName(QStringLiteral("ID_cli"));
+        Tabs_Clts->addTab(Ajout_Mag_5, QString());
+        Modif_Mag_5 = new QWidget();
+        Modif_Mag_5->setObjectName(QStringLiteral("Modif_Mag_5"));
+        verticalLayoutWidget_9 = new QWidget(Modif_Mag_5);
+        verticalLayoutWidget_9->setObjectName(QStringLiteral("verticalLayoutWidget_9"));
+        verticalLayoutWidget_9->setGeometry(QRect(120, 30, 81, 361));
+        Magasin_inputs_27 = new QVBoxLayout(verticalLayoutWidget_9);
+        Magasin_inputs_27->setObjectName(QStringLiteral("Magasin_inputs_27"));
+        Magasin_inputs_27->setContentsMargins(0, 0, 0, 0);
+        ID_Mag_10 = new QLineEdit(verticalLayoutWidget_9);
+        ID_Mag_10->setObjectName(QStringLiteral("ID_Mag_10"));
 
-        Client_inputs_2->addWidget(ID_cli);
+        Magasin_inputs_27->addWidget(ID_Mag_10);
 
-        Nom_Cli = new QLineEdit(verticalLayoutWidget_4);
-        Nom_Cli->setObjectName(QStringLiteral("Nom_Cli"));
+        Nom_Mag_10 = new QLineEdit(verticalLayoutWidget_9);
+        Nom_Mag_10->setObjectName(QStringLiteral("Nom_Mag_10"));
 
-        Client_inputs_2->addWidget(Nom_Cli);
+        Magasin_inputs_27->addWidget(Nom_Mag_10);
 
-        Prenom_Cli = new QLineEdit(verticalLayoutWidget_4);
-        Prenom_Cli->setObjectName(QStringLiteral("Prenom_Cli"));
+        Categorie_Mag_10 = new QLineEdit(verticalLayoutWidget_9);
+        Categorie_Mag_10->setObjectName(QStringLiteral("Categorie_Mag_10"));
 
-        Client_inputs_2->addWidget(Prenom_Cli);
+        Magasin_inputs_27->addWidget(Categorie_Mag_10);
 
-        Sexe_Cli = new QLineEdit(verticalLayoutWidget_4);
-        Sexe_Cli->setObjectName(QStringLiteral("Sexe_Cli"));
+        Categorie_Mag_11 = new QLineEdit(verticalLayoutWidget_9);
+        Categorie_Mag_11->setObjectName(QStringLiteral("Categorie_Mag_11"));
 
-        Client_inputs_2->addWidget(Sexe_Cli);
+        Magasin_inputs_27->addWidget(Categorie_Mag_11);
 
-        Email_Cli = new QLineEdit(verticalLayoutWidget_4);
-        Email_Cli->setObjectName(QStringLiteral("Email_Cli"));
+        Categorie_Mag_12 = new QLineEdit(verticalLayoutWidget_9);
+        Categorie_Mag_12->setObjectName(QStringLiteral("Categorie_Mag_12"));
 
-        Client_inputs_2->addWidget(Email_Cli);
+        Magasin_inputs_27->addWidget(Categorie_Mag_12);
 
-        Num_tel_Cli = new QLineEdit(verticalLayoutWidget_4);
-        Num_tel_Cli->setObjectName(QStringLiteral("Num_tel_Cli"));
+        Categorie_Mag_13 = new QLineEdit(verticalLayoutWidget_9);
+        Categorie_Mag_13->setObjectName(QStringLiteral("Categorie_Mag_13"));
 
-        Client_inputs_2->addWidget(Num_tel_Cli);
+        Magasin_inputs_27->addWidget(Categorie_Mag_13);
 
-        Point_fid_Cli = new QLineEdit(verticalLayoutWidget_4);
-        Point_fid_Cli->setObjectName(QStringLiteral("Point_fid_Cli"));
+        Location_Mag_14 = new QLineEdit(verticalLayoutWidget_9);
+        Location_Mag_14->setObjectName(QStringLiteral("Location_Mag_14"));
 
-        Client_inputs_2->addWidget(Point_fid_Cli);
+        Magasin_inputs_27->addWidget(Location_Mag_14);
 
-        verticalLayoutWidget_3 = new QWidget(Modif_Cli);
-        verticalLayoutWidget_3->setObjectName(QStringLiteral("verticalLayoutWidget_3"));
-        verticalLayoutWidget_3->setGeometry(QRect(30, 20, 91, 351));
-        Client_inputs = new QVBoxLayout(verticalLayoutWidget_3);
-        Client_inputs->setObjectName(QStringLiteral("Client_inputs"));
-        Client_inputs->setContentsMargins(0, 0, 0, 0);
-        ID_Client = new QLabel(verticalLayoutWidget_3);
-        ID_Client->setObjectName(QStringLiteral("ID_Client"));
+        verticalLayoutWidget_10 = new QWidget(Modif_Mag_5);
+        verticalLayoutWidget_10->setObjectName(QStringLiteral("verticalLayoutWidget_10"));
+        verticalLayoutWidget_10->setGeometry(QRect(50, 40, 71, 331));
+        Magasin_inputs_28 = new QVBoxLayout(verticalLayoutWidget_10);
+        Magasin_inputs_28->setObjectName(QStringLiteral("Magasin_inputs_28"));
+        Magasin_inputs_28->setContentsMargins(0, 0, 0, 0);
+        ID_Magasin_14 = new QLabel(verticalLayoutWidget_10);
+        ID_Magasin_14->setObjectName(QStringLiteral("ID_Magasin_14"));
 
-        Client_inputs->addWidget(ID_Client);
+        Magasin_inputs_28->addWidget(ID_Magasin_14);
 
-        Nom_Client = new QLabel(verticalLayoutWidget_3);
-        Nom_Client->setObjectName(QStringLiteral("Nom_Client"));
+        Nom_Magasin_10 = new QLabel(verticalLayoutWidget_10);
+        Nom_Magasin_10->setObjectName(QStringLiteral("Nom_Magasin_10"));
 
-        Client_inputs->addWidget(Nom_Client);
+        Magasin_inputs_28->addWidget(Nom_Magasin_10);
 
-        Prenom = new QLabel(verticalLayoutWidget_3);
-        Prenom->setObjectName(QStringLiteral("Prenom"));
+        Categorie_10 = new QLabel(verticalLayoutWidget_10);
+        Categorie_10->setObjectName(QStringLiteral("Categorie_10"));
 
-        Client_inputs->addWidget(Prenom);
+        Magasin_inputs_28->addWidget(Categorie_10);
 
-        Sexe = new QLabel(verticalLayoutWidget_3);
-        Sexe->setObjectName(QStringLiteral("Sexe"));
+        Categorie_12 = new QLabel(verticalLayoutWidget_10);
+        Categorie_12->setObjectName(QStringLiteral("Categorie_12"));
 
-        Client_inputs->addWidget(Sexe);
+        Magasin_inputs_28->addWidget(Categorie_12);
 
-        Email = new QLabel(verticalLayoutWidget_3);
-        Email->setObjectName(QStringLiteral("Email"));
+        Categorie_13 = new QLabel(verticalLayoutWidget_10);
+        Categorie_13->setObjectName(QStringLiteral("Categorie_13"));
 
-        Client_inputs->addWidget(Email);
+        Magasin_inputs_28->addWidget(Categorie_13);
 
-        Num_tel = new QLabel(verticalLayoutWidget_3);
-        Num_tel->setObjectName(QStringLiteral("Num_tel"));
+        Categorie_11 = new QLabel(verticalLayoutWidget_10);
+        Categorie_11->setObjectName(QStringLiteral("Categorie_11"));
 
-        Client_inputs->addWidget(Num_tel);
+        Magasin_inputs_28->addWidget(Categorie_11);
 
-        Point_fid = new QLabel(verticalLayoutWidget_3);
-        Point_fid->setObjectName(QStringLiteral("Point_fid"));
+        Location_10 = new QLabel(verticalLayoutWidget_10);
+        Location_10->setObjectName(QStringLiteral("Location_10"));
 
-        Client_inputs->addWidget(Point_fid);
+        Magasin_inputs_28->addWidget(Location_10);
 
-        Tabs_Cli->addTab(Modif_Cli, QString());
+        Modif_Mag_btn_5 = new QPushButton(Modif_Mag_5);
+        Modif_Mag_btn_5->setObjectName(QStringLiteral("Modif_Mag_btn_5"));
+        Modif_Mag_btn_5->setGeometry(QRect(450, 360, 93, 28));
+        Tabs_Clts->addTab(Modif_Mag_5, QString());
+        tab_21 = new QWidget();
+        tab_21->setObjectName(QStringLiteral("tab_21"));
+        Supp_Mag_btn_5 = new QPushButton(tab_21);
+        Supp_Mag_btn_5->setObjectName(QStringLiteral("Supp_Mag_btn_5"));
+        Supp_Mag_btn_5->setGeometry(QRect(350, 240, 93, 28));
+        verticalLayoutWidget_29 = new QWidget(tab_21);
+        verticalLayoutWidget_29->setObjectName(QStringLiteral("verticalLayoutWidget_29"));
+        verticalLayoutWidget_29->setGeometry(QRect(90, 140, 61, 41));
+        Magasin_inputs_29 = new QVBoxLayout(verticalLayoutWidget_29);
+        Magasin_inputs_29->setObjectName(QStringLiteral("Magasin_inputs_29"));
+        Magasin_inputs_29->setContentsMargins(0, 0, 0, 0);
+        ID_Magasin_15 = new QLabel(verticalLayoutWidget_29);
+        ID_Magasin_15->setObjectName(QStringLiteral("ID_Magasin_15"));
+
+        Magasin_inputs_29->addWidget(ID_Magasin_15);
+
+        verticalLayoutWidget_30 = new QWidget(tab_21);
+        verticalLayoutWidget_30->setObjectName(QStringLiteral("verticalLayoutWidget_30"));
+        verticalLayoutWidget_30->setGeometry(QRect(150, 130, 81, 71));
+        Magasin_inputs_30 = new QVBoxLayout(verticalLayoutWidget_30);
+        Magasin_inputs_30->setObjectName(QStringLiteral("Magasin_inputs_30"));
+        Magasin_inputs_30->setContentsMargins(0, 0, 0, 0);
+        Location_Mag_15 = new QLineEdit(verticalLayoutWidget_30);
+        Location_Mag_15->setObjectName(QStringLiteral("Location_Mag_15"));
+
+        Magasin_inputs_30->addWidget(Location_Mag_15);
+
+        Tabs_Clts->addTab(tab_21, QString());
+        tab_22 = new QWidget();
+        tab_22->setObjectName(QStringLiteral("tab_22"));
+        tableView_5 = new QTableView(tab_22);
+        tableView_5->setObjectName(QStringLiteral("tableView_5"));
+        tableView_5->setGeometry(QRect(30, 30, 631, 251));
+        pdf_btn_5 = new QPushButton(tab_22);
+        pdf_btn_5->setObjectName(QStringLiteral("pdf_btn_5"));
+        pdf_btn_5->setGeometry(QRect(290, 340, 131, 41));
+        Tabs_Clts->addTab(tab_22, QString());
+        tab_23 = new QWidget();
+        tab_23->setObjectName(QStringLiteral("tab_23"));
+        Tabs_Clts->addTab(tab_23, QString());
+        tab_24 = new QWidget();
+        tab_24->setObjectName(QStringLiteral("tab_24"));
+        Tabs_Clts->addTab(tab_24, QString());
+        tab_25 = new QWidget();
+        tab_25->setObjectName(QStringLiteral("tab_25"));
+        Tabs_Clts->addTab(tab_25, QString());
         tabWidget->addTab(Magasin, QString());
         MainWindow->setCentralWidget(centralwidget);
         menubar = new QMenuBar(MainWindow);
@@ -506,8 +609,8 @@ public:
         retranslateUi(MainWindow);
 
         tabWidget->setCurrentIndex(0);
-        Tabs_Mag->setCurrentIndex(1);
-        Tabs_Cli->setCurrentIndex(0);
+        Tabs_Mag->setCurrentIndex(5);
+        Tabs_Clts->setCurrentIndex(3);
 
 
         QMetaObject::connectSlotsByName(MainWindow);
@@ -521,6 +624,7 @@ public:
         Nom_Magasin_2->setText(QApplication::translate("MainWindow", "Nom :", Q_NULLPTR));
         Categorie_2->setText(QApplication::translate("MainWindow", "Categorie :", Q_NULLPTR));
         Location_2->setText(QApplication::translate("MainWindow", "Location :", Q_NULLPTR));
+        Ajout_Mag_btn_2->setText(QApplication::translate("MainWindow", "not", Q_NULLPTR));
         Tabs_Mag->setTabText(Tabs_Mag->indexOf(Ajout_Mag), QApplication::translate("MainWindow", "Ajouter", Q_NULLPTR));
         ID_Magasin->setText(QApplication::translate("MainWindow", "ID :", Q_NULLPTR));
         Nom_Magasin->setText(QApplication::translate("MainWindow", "Nom :", Q_NULLPTR));
@@ -532,30 +636,44 @@ public:
         ID_Magasin_3->setText(QApplication::translate("MainWindow", "ID :", Q_NULLPTR));
         Tabs_Mag->setTabText(Tabs_Mag->indexOf(tab), QApplication::translate("MainWindow", "Supprimer", Q_NULLPTR));
         pdf_btn->setText(QApplication::translate("MainWindow", "Enregistrer en pdf", Q_NULLPTR));
-        refresh->setText(QApplication::translate("MainWindow", "Refresh", Q_NULLPTR));
         Tabs_Mag->setTabText(Tabs_Mag->indexOf(tab_2), QApplication::translate("MainWindow", "Afficher", Q_NULLPTR));
+        groupBox_5->setTitle(QApplication::translate("MainWindow", "Trier", Q_NULLPTR));
+        pushButton_TriASC->setText(QApplication::translate("MainWindow", "Tri ASC", Q_NULLPTR));
+        pushButton_TriDESC->setText(QApplication::translate("MainWindow", "Tri DESC", Q_NULLPTR));
+        pushButton_3->setText(QApplication::translate("MainWindow", "Quitter", Q_NULLPTR));
         Tabs_Mag->setTabText(Tabs_Mag->indexOf(tab_3), QApplication::translate("MainWindow", "Tri", Q_NULLPTR));
+        lineEdit_rechercher->setText(QString());
+        rechercher->setText(QApplication::translate("MainWindow", "Rechercher", Q_NULLPTR));
         Tabs_Mag->setTabText(Tabs_Mag->indexOf(tab_4), QApplication::translate("MainWindow", "Recherche", Q_NULLPTR));
+        pushButton_6->setText(QApplication::translate("MainWindow", "afficher stat", Q_NULLPTR));
         Tabs_Mag->setTabText(Tabs_Mag->indexOf(tab_5), QApplication::translate("MainWindow", "Statistique", Q_NULLPTR));
         tabWidget->setTabText(tabWidget->indexOf(Clients), QApplication::translate("MainWindow", "Magasins", Q_NULLPTR));
-        Ajout_Cli_btn->setText(QApplication::translate("MainWindow", "Ajouter", Q_NULLPTR));
-        ID_Client_2->setText(QApplication::translate("MainWindow", "ID :", Q_NULLPTR));
-        Nom_Client_2->setText(QApplication::translate("MainWindow", "Nom :", Q_NULLPTR));
-        Prenom_2->setText(QApplication::translate("MainWindow", "Prenom :", Q_NULLPTR));
-        Sexe_2->setText(QApplication::translate("MainWindow", "Sexe :", Q_NULLPTR));
-        Email_2->setText(QApplication::translate("MainWindow", "Email :", Q_NULLPTR));
-        Num_tel_2->setText(QApplication::translate("MainWindow", "Numero Tel :", Q_NULLPTR));
-        Point_fid_2->setText(QApplication::translate("MainWindow", "Points Fidelite :", Q_NULLPTR));
-        Tabs_Cli->setTabText(Tabs_Cli->indexOf(Ajout_Cli), QApplication::translate("MainWindow", "Ajouter", Q_NULLPTR));
-        Modif_Cli_btn->setText(QApplication::translate("MainWindow", "Modifier", Q_NULLPTR));
-        ID_Client->setText(QApplication::translate("MainWindow", "ID :", Q_NULLPTR));
-        Nom_Client->setText(QApplication::translate("MainWindow", "Nom :", Q_NULLPTR));
-        Prenom->setText(QApplication::translate("MainWindow", "Prenom :", Q_NULLPTR));
-        Sexe->setText(QApplication::translate("MainWindow", "Sexe :", Q_NULLPTR));
-        Email->setText(QApplication::translate("MainWindow", "Email :", Q_NULLPTR));
-        Num_tel->setText(QApplication::translate("MainWindow", "Numero Tel :", Q_NULLPTR));
-        Point_fid->setText(QApplication::translate("MainWindow", "Points Fidelite :", Q_NULLPTR));
-        Tabs_Cli->setTabText(Tabs_Cli->indexOf(Modif_Cli), QApplication::translate("MainWindow", "Modifier", Q_NULLPTR));
+        on_Ajout_Mag_btn_5_clicked->setText(QApplication::translate("MainWindow", "Ajouter", Q_NULLPTR));
+        ID_Magasin_16->setText(QApplication::translate("MainWindow", "ID :", Q_NULLPTR));
+        Nom_Magasin_11->setText(QApplication::translate("MainWindow", "Nom :", Q_NULLPTR));
+        Categorie_14->setText(QApplication::translate("MainWindow", "Prenom :", Q_NULLPTR));
+        Categorie_15->setText(QApplication::translate("MainWindow", "Sexe :", Q_NULLPTR));
+        Categorie_16->setText(QApplication::translate("MainWindow", "Email :", Q_NULLPTR));
+        Categorie_17->setText(QApplication::translate("MainWindow", "Num.Tel :", Q_NULLPTR));
+        Location_11->setText(QApplication::translate("MainWindow", "Pts.Fid :", Q_NULLPTR));
+        Tabs_Clts->setTabText(Tabs_Clts->indexOf(Ajout_Mag_5), QApplication::translate("MainWindow", "Ajouter", Q_NULLPTR));
+        ID_Magasin_14->setText(QApplication::translate("MainWindow", "ID :", Q_NULLPTR));
+        Nom_Magasin_10->setText(QApplication::translate("MainWindow", "Nom :", Q_NULLPTR));
+        Categorie_10->setText(QApplication::translate("MainWindow", "Prenom :", Q_NULLPTR));
+        Categorie_12->setText(QApplication::translate("MainWindow", "Sexe :", Q_NULLPTR));
+        Categorie_13->setText(QApplication::translate("MainWindow", "Email :", Q_NULLPTR));
+        Categorie_11->setText(QApplication::translate("MainWindow", "Num.Tel :", Q_NULLPTR));
+        Location_10->setText(QApplication::translate("MainWindow", "Pts.Fid :", Q_NULLPTR));
+        Modif_Mag_btn_5->setText(QApplication::translate("MainWindow", "Modifier", Q_NULLPTR));
+        Tabs_Clts->setTabText(Tabs_Clts->indexOf(Modif_Mag_5), QApplication::translate("MainWindow", "Modifier", Q_NULLPTR));
+        Supp_Mag_btn_5->setText(QApplication::translate("MainWindow", "Supprimer", Q_NULLPTR));
+        ID_Magasin_15->setText(QApplication::translate("MainWindow", "ID :", Q_NULLPTR));
+        Tabs_Clts->setTabText(Tabs_Clts->indexOf(tab_21), QApplication::translate("MainWindow", "Supprimer", Q_NULLPTR));
+        pdf_btn_5->setText(QApplication::translate("MainWindow", "Enregistrer en pdf", Q_NULLPTR));
+        Tabs_Clts->setTabText(Tabs_Clts->indexOf(tab_22), QApplication::translate("MainWindow", "Afficher", Q_NULLPTR));
+        Tabs_Clts->setTabText(Tabs_Clts->indexOf(tab_23), QApplication::translate("MainWindow", "Tri", Q_NULLPTR));
+        Tabs_Clts->setTabText(Tabs_Clts->indexOf(tab_24), QApplication::translate("MainWindow", "Recherche", Q_NULLPTR));
+        Tabs_Clts->setTabText(Tabs_Clts->indexOf(tab_25), QApplication::translate("MainWindow", "Statistique", Q_NULLPTR));
         tabWidget->setTabText(tabWidget->indexOf(Magasin), QApplication::translate("MainWindow", "Clients", Q_NULLPTR));
         menuCentre_Commercial->setTitle(QApplication::translate("MainWindow", "Centre Commercial", Q_NULLPTR));
     } // retranslateUi

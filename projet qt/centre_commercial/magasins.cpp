@@ -46,7 +46,7 @@ bool Magasins::Modifier(int id,QString nom,QString categorie,QString location)
 {
     QSqlQuery q;
     QString res=QString::number(id);
-    q.prepare("update magasins set id=:id,nom=:nom,categorie=:categorie,location=:location");
+    q.prepare("update magasins set id=:id,nom=:nom,categorie=:categorie,location=:location where id=:id");
     q.bindValue(":id",res);
     q.bindValue(":nom",nom);
     q.bindValue(":categorie",categorie);

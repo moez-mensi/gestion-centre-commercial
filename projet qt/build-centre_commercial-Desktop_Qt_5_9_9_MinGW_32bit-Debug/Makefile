@@ -218,6 +218,7 @@ Makefile: ../centre_commercial/centre_commercial.pro C:/Qt/Qt5.9.9/5.9.9/mingw53
 		C:/Qt/Qt5.9.9/5.9.9/mingw53_32/mkspecs/features/resolve_config.prf \
 		C:/Qt/Qt5.9.9/5.9.9/mingw53_32/mkspecs/features/exclusive_builds_post.prf \
 		C:/Qt/Qt5.9.9/5.9.9/mingw53_32/mkspecs/features/default_post.prf \
+		C:/Qt/Qt5.9.9/5.9.9/mingw53_32/mkspecs/features/win32/console.prf \
 		C:/Qt/Qt5.9.9/5.9.9/mingw53_32/mkspecs/features/qml_debug.prf \
 		C:/Qt/Qt5.9.9/5.9.9/mingw53_32/mkspecs/features/precompile_header.prf \
 		C:/Qt/Qt5.9.9/5.9.9/mingw53_32/mkspecs/features/warn_on.prf \
@@ -228,13 +229,13 @@ Makefile: ../centre_commercial/centre_commercial.pro C:/Qt/Qt5.9.9/5.9.9/mingw53
 		C:/Qt/Qt5.9.9/5.9.9/mingw53_32/mkspecs/features/uic.prf \
 		C:/Qt/Qt5.9.9/5.9.9/mingw53_32/mkspecs/features/qmake_use.prf \
 		C:/Qt/Qt5.9.9/5.9.9/mingw53_32/mkspecs/features/file_copies.prf \
-		C:/Qt/Qt5.9.9/5.9.9/mingw53_32/mkspecs/features/win32/windows.prf \
 		C:/Qt/Qt5.9.9/5.9.9/mingw53_32/mkspecs/features/testcase_targets.prf \
 		C:/Qt/Qt5.9.9/5.9.9/mingw53_32/mkspecs/features/exceptions.prf \
 		C:/Qt/Qt5.9.9/5.9.9/mingw53_32/mkspecs/features/yacc.prf \
 		C:/Qt/Qt5.9.9/5.9.9/mingw53_32/mkspecs/features/lex.prf \
 		../centre_commercial/centre_commercial.pro \
-		C:/Qt/Qt5.9.9/5.9.9/mingw53_32/lib/qtmaind.prl \
+		C:/Qt/Qt5.9.9/5.9.9/mingw53_32/lib/Qt5Charts.prl \
+		C:/Qt/Qt5.9.9/5.9.9/mingw53_32/lib/Qt5PrintSupport.prl \
 		C:/Qt/Qt5.9.9/5.9.9/mingw53_32/lib/Qt5Widgets.prl \
 		C:/Qt/Qt5.9.9/5.9.9/mingw53_32/lib/Qt5Gui.prl \
 		C:/Qt/Qt5.9.9/5.9.9/mingw53_32/lib/Qt5Sql.prl \
@@ -397,6 +398,7 @@ C:/Qt/Qt5.9.9/5.9.9/mingw53_32/mkspecs/features/win32/default_pre.prf:
 C:/Qt/Qt5.9.9/5.9.9/mingw53_32/mkspecs/features/resolve_config.prf:
 C:/Qt/Qt5.9.9/5.9.9/mingw53_32/mkspecs/features/exclusive_builds_post.prf:
 C:/Qt/Qt5.9.9/5.9.9/mingw53_32/mkspecs/features/default_post.prf:
+C:/Qt/Qt5.9.9/5.9.9/mingw53_32/mkspecs/features/win32/console.prf:
 C:/Qt/Qt5.9.9/5.9.9/mingw53_32/mkspecs/features/qml_debug.prf:
 C:/Qt/Qt5.9.9/5.9.9/mingw53_32/mkspecs/features/precompile_header.prf:
 C:/Qt/Qt5.9.9/5.9.9/mingw53_32/mkspecs/features/warn_on.prf:
@@ -407,13 +409,13 @@ C:/Qt/Qt5.9.9/5.9.9/mingw53_32/mkspecs/features/win32/opengl.prf:
 C:/Qt/Qt5.9.9/5.9.9/mingw53_32/mkspecs/features/uic.prf:
 C:/Qt/Qt5.9.9/5.9.9/mingw53_32/mkspecs/features/qmake_use.prf:
 C:/Qt/Qt5.9.9/5.9.9/mingw53_32/mkspecs/features/file_copies.prf:
-C:/Qt/Qt5.9.9/5.9.9/mingw53_32/mkspecs/features/win32/windows.prf:
 C:/Qt/Qt5.9.9/5.9.9/mingw53_32/mkspecs/features/testcase_targets.prf:
 C:/Qt/Qt5.9.9/5.9.9/mingw53_32/mkspecs/features/exceptions.prf:
 C:/Qt/Qt5.9.9/5.9.9/mingw53_32/mkspecs/features/yacc.prf:
 C:/Qt/Qt5.9.9/5.9.9/mingw53_32/mkspecs/features/lex.prf:
 ../centre_commercial/centre_commercial.pro:
-C:/Qt/Qt5.9.9/5.9.9/mingw53_32/lib/qtmaind.prl:
+C:/Qt/Qt5.9.9/5.9.9/mingw53_32/lib/Qt5Charts.prl:
+C:/Qt/Qt5.9.9/5.9.9/mingw53_32/lib/Qt5PrintSupport.prl:
 C:/Qt/Qt5.9.9/5.9.9/mingw53_32/lib/Qt5Widgets.prl:
 C:/Qt/Qt5.9.9/5.9.9/mingw53_32/lib/Qt5Gui.prl:
 C:/Qt/Qt5.9.9/5.9.9/mingw53_32/lib/Qt5Sql.prl:

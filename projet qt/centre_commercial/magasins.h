@@ -4,6 +4,9 @@
 #include <QSqlQuery>
 #include <QSqlDatabase>
 #include <QSqlQueryModel>
+
+
+
 class Magasins
 {
 

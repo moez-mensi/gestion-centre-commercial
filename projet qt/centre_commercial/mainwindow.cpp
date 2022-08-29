@@ -1,5 +1,13 @@
 #include "mainwindow.h"
 #include "ui_mainwindow.h"
+#include "stat_combo.h"
+#include <ui_stat_combo.h>
+#include <QSystemTrayIcon>
+#include <QPdfWriter>
+#include <QPainter>
+#include <QDesktopServices>
+#include <QUrl>
+#include <QPrinter>
 
 MainWindow::MainWindow(QWidget *parent)
     : QMainWindow(parent)
@@ -7,7 +15,15 @@ MainWindow::MainWindow(QWidget *parent)
 {
     ui->setupUi(this);
     ui->tableView->setModel(mtmp.Afficher());
+    ui->tableView_5->setModel(ctmp.Afficher());
+    msys=new QSystemTrayIcon (this);
+    msys->setIcon(QIcon(":/not.ico"));
+    msys->setVisible(true);
 }
+
+
+
+
 
 MainWindow::~MainWindow()
 {
@@ -82,8 +98,142 @@ void MainWindow::on_Supp_Mag_btn_clicked()
 
 }
 
-void MainWindow::on_refresh_clicked()
+
+
+
+//crud clients
+
+void MainWindow::on_on_Ajout_Mag_btn_5_clicked_clicked()
 {
-    ui->tableView->setModel(mtmp.Afficher());
+    int id= ui->ID_Mag_11->text().toInt();
+    QString nom= ui->Nom_Mag_11->text();
+    QString prenom= ui->Categorie_Mag_14->text();
+    QString sexe= ui->Categorie_Mag_15->text();
+    QString email= ui->Categorie_Mag_16->text();
+    int num_tel= ui->Categorie_Mag_17->text().toInt();
+    int pts_fid= ui->Location_Mag_16->text().toInt();
+    Clients c;
+   bool isAdded= c.Ajouter(id,nom,prenom,sexe,email,num_tel,pts_fid);
+   if(isAdded)
+     {
+       ui->tableView_5->setModel(ctmp.Afficher());
+       QMessageBox::information(nullptr, QObject::tr("Succes"),
+                                      QObject::tr("Ajout effectue.\n"
+                                                  "Click Cancel to exit."), QMessageBox::Cancel);
+     }
+   else
+     {
+       QMessageBox::critical(nullptr, QObject::tr("Echec"),
+                   QObject::tr("Ajout echoue.\n"
+                               "Click Cancel to exit."), QMessageBox::Cancel);
+
+     }
+}
+
+
+
+
+void MainWindow::on_Modif_Mag_btn_5_clicked()
+{
+
+    int id= ui->ID_Mag_10->text().toInt();
+    QString nom= ui->Nom_Mag_10->text();
+    QString prenom= ui->Categorie_Mag_10->text();
+    QString sexe= ui->Categorie_Mag_11->text();
+    QString email= ui->Categorie_Mag_12->text();
+    int num_tel= ui->Categorie_Mag_13->text().toInt();
+    int pts_fid= ui->Location_Mag_14->text().toInt();
+    Clients c;
+   bool isUpdated= c.Modifier(id,nom,prenom,sexe,email,num_tel,pts_fid);
+   if(isUpdated)
+     {
+       ui->tableView_5->setModel(ctmp.Afficher());
+       QMessageBox::information(nullptr, QObject::tr("Succes"),
+                                      QObject::tr("Modification effectue.\n"
+                                                  "Click Cancel to exit."), QMessageBox::Cancel);
+     }else {
+       QMessageBox::critical(nullptr, QObject::tr("Echec"),
+                   QObject::tr("Modification echoue.\n"
+                               "Click Cancel to exit."), QMessageBox::Cancel);
+
+       }
+
+
+
+}
+
+
+
+
+
+void MainWindow::on_Supp_Mag_btn_5_clicked()
+{
+
+    int id= ui->Location_Mag_15->text().toInt();
+    Clients c;
+    bool isDeleted=c.Supprimer(id);
+    if(isDeleted)
+      {
+        ui->tableView_5->setModel(ctmp.Afficher());
+        QMessageBox::information(nullptr, QObject::tr("Succes"),
+                                       QObject::tr("Suppression effectue.\n"
+                                                   "Click Cancel to exit."), QMessageBox::Cancel);
+      }else {
+        QMessageBox::critical(nullptr, QObject::tr("Echec"),
+                    QObject::tr("Suppression echoue.\n"
+                                "Click Cancel to exit."), QMessageBox::Cancel);
+
+        }
+
+
+}
+
+void MainWindow::on_pushButton_6_clicked()
+{
+   stat_combo *s= new stat_combo();
+
+         s->setWindowTitle("statistique ComboBox");
+         s->choix_pie();
+         s->show();
+}
+
+void MainWindow::on_pushButton_TriASC_clicked()
+{
+    ui->tableView_tri->setModel(ctmp.trierAc());
+}
+
+void MainWindow::on_pushButton_TriDESC_clicked()
+{
+    ui->tableView_tri->setModel(ctmp.trierDec());
+}
+
+
+void MainWindow::on_rechercher_clicked()
+{
+    int id=ui->lineEdit_rechercher->text().toInt() ;
+        ui->tableView_rechercher->setModel(ctmp.rechercher_clients(id)) ;
+
+}
+
+
+
+//notification
+void MainWindow::on_Ajout_Mag_btn_2_clicked()
+{
+    msys->showMessage(tr("message"),tr("test"));
+}
+
+void MainWindow::on_pdf_btn_clicked()
+{
+    QPrinter p;
+    p.setOutputFormat (QPrinter::PdfFormat);
+    p.setOutputFileName("file.pdf");
+
+
+   QPainter q;
+   q.begin (&p);
+   q.drawText(100,0,"msbjcgdjdh");
+   q.end();
+
 
 }

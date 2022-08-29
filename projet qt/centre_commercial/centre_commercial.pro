@@ -1,5 +1,7 @@
 QT       += core gui sql
-
+QT+= sql
+ QT += charts
+    QT += printsupport
 greaterThan(QT_MAJOR_VERSION, 4): QT += widgets
 
 # any Qt feature that has been marked deprecated (the exact warnings
@@ -26,10 +28,19 @@ HEADERS += \
     clients.h \
     connection.h \
     magasins.h \
-    mainwindow.h
+    mainwindow.h \
+    stat_combo.h
 
 FORMS += \
-    mainwindow.ui
+    mainwindow.ui \
+    stat_combo.ui
+
+
+RC_ICONS=not.ico
+
+
+CONFIG += console
+QT += sql
 
 # Default rules for deployment.
 qnx: target.path = /tmp/$${TARGET}/bin
