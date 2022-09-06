@@ -17,7 +17,7 @@ MainWindow::MainWindow(QWidget *parent)
     ui->tableView->setModel(mtmp.Afficher());
     ui->tableView_5->setModel(ctmp.Afficher());
     msys=new QSystemTrayIcon (this);
-    msys->setIcon(QIcon(":/not.ico"));
+    msys->setIcon(QIcon(":/logo.ico"));
     msys->setVisible(true);
 }
 
@@ -45,10 +45,17 @@ void MainWindow::on_Ajout_Mag_btn_clicked()
        QMessageBox::information(nullptr, QObject::tr("Succes"),
                                       QObject::tr("Ajout effectue.\n"
                                                   "Click Cancel to exit."), QMessageBox::Cancel);
-     }else {
+       msys->showMessage(tr("Ajout"),tr("Efféctuée"));
+
+     }
+   else
+   {
        QMessageBox::critical(nullptr, QObject::tr("Echec"),
                    QObject::tr("Ajout echoue.\n"
                                "Click Cancel to exit."), QMessageBox::Cancel);
+
+       msys->showMessage(tr("Ajout"),tr("Echouée"));
+
 
        }
    }
@@ -68,10 +75,15 @@ void MainWindow::on_Modif_Mag_btn_clicked()
        QMessageBox::information(nullptr, QObject::tr("Succes"),
                                       QObject::tr("Modification effectue.\n"
                                                   "Click Cancel to exit."), QMessageBox::Cancel);
+       msys->showMessage(tr("Modification"),tr("Efféctuée"));
+
      }else {
        QMessageBox::critical(nullptr, QObject::tr("Echec"),
                    QObject::tr("Modification echoue.\n"
                                "Click Cancel to exit."), QMessageBox::Cancel);
+
+       msys->showMessage(tr("Ajout"),tr("Echouée"));
+
 
        }
 
@@ -89,10 +101,17 @@ void MainWindow::on_Supp_Mag_btn_clicked()
         QMessageBox::information(nullptr, QObject::tr("Succes"),
                                        QObject::tr("Suppression effectue.\n"
                                                    "Click Cancel to exit."), QMessageBox::Cancel);
-      }else {
+
+        msys->showMessage(tr("Supression"),tr("Efféctuée"));
+      }
+    else
+    {
         QMessageBox::critical(nullptr, QObject::tr("Echec"),
                     QObject::tr("Suppression echoue.\n"
                                 "Click Cancel to exit."), QMessageBox::Cancel);
+
+        msys->showMessage(tr("Supression"),tr("Echouée"));
+
 
         }
 
@@ -120,6 +139,9 @@ void MainWindow::on_on_Ajout_Mag_btn_5_clicked_clicked()
        QMessageBox::information(nullptr, QObject::tr("Succes"),
                                       QObject::tr("Ajout effectue.\n"
                                                   "Click Cancel to exit."), QMessageBox::Cancel);
+
+       msys->showMessage(tr("Ajout"),tr("Efféctuée"));
+
      }
    else
      {
@@ -127,6 +149,7 @@ void MainWindow::on_on_Ajout_Mag_btn_5_clicked_clicked()
                    QObject::tr("Ajout echoue.\n"
                                "Click Cancel to exit."), QMessageBox::Cancel);
 
+       msys->showMessage(tr("Ajout"),tr("Echouée"));
      }
 }
 
@@ -134,6 +157,7 @@ void MainWindow::on_on_Ajout_Mag_btn_5_clicked_clicked()
 
 
 void MainWindow::on_Modif_Mag_btn_5_clicked()
+
 {
 
     int id= ui->ID_Mag_10->text().toInt();
@@ -151,11 +175,15 @@ void MainWindow::on_Modif_Mag_btn_5_clicked()
        QMessageBox::information(nullptr, QObject::tr("Succes"),
                                       QObject::tr("Modification effectue.\n"
                                                   "Click Cancel to exit."), QMessageBox::Cancel);
-     }else {
+       msys->showMessage(tr("Modification"),tr("Efféctuée"));
+     }
+   else
+     {
        QMessageBox::critical(nullptr, QObject::tr("Echec"),
                    QObject::tr("Modification echoue.\n"
                                "Click Cancel to exit."), QMessageBox::Cancel);
 
+       msys->showMessage(tr("Supression"),tr("Echouée"));
        }
 
 
@@ -167,6 +195,7 @@ void MainWindow::on_Modif_Mag_btn_5_clicked()
 
 
 void MainWindow::on_Supp_Mag_btn_5_clicked()
+
 {
 
     int id= ui->Location_Mag_15->text().toInt();
@@ -178,12 +207,19 @@ void MainWindow::on_Supp_Mag_btn_5_clicked()
         QMessageBox::information(nullptr, QObject::tr("Succes"),
                                        QObject::tr("Suppression effectue.\n"
                                                    "Click Cancel to exit."), QMessageBox::Cancel);
-      }else {
+        msys->showMessage(tr("Supression"),tr("Efféctuée"));
+      }
+    else
+      {
         QMessageBox::critical(nullptr, QObject::tr("Echec"),
                     QObject::tr("Suppression echoue.\n"
                                 "Click Cancel to exit."), QMessageBox::Cancel);
 
-        }
+        msys->showMessage(tr("Supression"),tr("Echouée"));
+      }
+
+
+
 
 
 }
@@ -199,19 +235,19 @@ void MainWindow::on_pushButton_6_clicked()
 
 void MainWindow::on_pushButton_TriASC_clicked()
 {
-    ui->tableView_tri->setModel(ctmp.trierAc());
+     ui->tableView_tri->setModel(mtmp.trierAc2());
 }
 
 void MainWindow::on_pushButton_TriDESC_clicked()
 {
-    ui->tableView_tri->setModel(ctmp.trierDec());
+     ui->tableView_tri->setModel(mtmp.trierDec2());
 }
 
 
 void MainWindow::on_rechercher_clicked()
 {
     int id=ui->lineEdit_rechercher->text().toInt() ;
-        ui->tableView_rechercher->setModel(ctmp.rechercher_clients(id)) ;
+        ui->tableView_rechercher->setModel(mtmp.rechercher_mag(id)) ;
 
 }
 
@@ -236,4 +272,53 @@ void MainWindow::on_pdf_btn_clicked()
    q.end();
 
 
+}
+
+
+
+void MainWindow::on_rechercher_3_clicked()
+{
+       int id=ui->lineEdit_rechercher_3->text().toInt() ;
+       ui->tableView_rechercher_3->setModel(ctmp.rechercher_clients(id)) ;
+}
+
+
+
+void MainWindow::on_pushButton_TriASC_2_clicked()
+{
+    ui->tableView_tri_2->setModel(ctmp.trierAc());
+}
+
+
+
+void MainWindow::on_pushButton_TriDESC_2_clicked()
+{
+    ui->tableView_tri_2->setModel(ctmp.trierDec());
+}
+
+
+
+
+
+void MainWindow::on_pushButton_7_clicked()
+{
+
+    stat_combo *s= new stat_combo();
+
+          s->setWindowTitle("statistique ComboBox");
+          s->choix_pie_mag();
+          s->show();
+
+}
+
+
+
+
+
+
+
+void MainWindow::on_pushButton_clicked()
+{
+    QString link="https://mail.google.com/mail/u/1/?view=cm&source=mailto&to=[email@address]";
+    QDesktopServices::openUrl(link);
 }

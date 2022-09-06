@@ -1,3 +1,4 @@
+
 #ifndef MAINWINDOW_H
 #define MAINWINDOW_H
 
@@ -45,12 +46,21 @@ private slots:
 
     void on_rechercher_clicked();
 
-
-
-
     void on_Ajout_Mag_btn_2_clicked();
 
     void on_pdf_btn_clicked();
+
+    void on_rechercher_3_clicked();
+
+    void on_pushButton_TriASC_2_clicked();
+
+    void on_pushButton_TriDESC_2_clicked();
+
+    void on_pushButton_7_clicked();
+
+    void on_pdf_btn_7_clicked();
+
+    void on_pushButton_clicked();
 
 private:
     Ui::MainWindow *ui;

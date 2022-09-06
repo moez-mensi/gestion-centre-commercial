@@ -17,14 +17,14 @@
    <widget class="QTabWidget" name="tabWidget">
     <property name="geometry">
      <rect>
-      <x>10</x>
-      <y>10</y>
-      <width>781</width>
+      <x>0</x>
+      <y>0</y>
+      <width>791</width>
       <height>551</height>
      </rect>
     </property>
     <property name="currentIndex">
-     <number>0</number>
+     <number>1</number>
     </property>
     <widget class="QWidget" name="Clients">
      <property name="enabled">
@@ -46,7 +46,7 @@
        <enum>QTabWidget::Triangular</enum>
       </property>
       <property name="currentIndex">
-       <number>5</number>
+       <number>0</number>
       </property>
       <property name="tabsClosable">
        <bool>false</bool>
@@ -145,6 +145,44 @@
          <string>not</string>
         </property>
        </widget>
+       <widget class="QLabel" name="label_13">
+        <property name="geometry">
+         <rect>
+          <x>-30</x>
+          <y>-80</y>
+          <width>821</width>
+          <height>571</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string/>
+        </property>
+        <property name="pixmap">
+         <pixmap>../../Untitled-11.png</pixmap>
+        </property>
+       </widget>
+       <widget class="QLabel" name="label_14">
+        <property name="geometry">
+         <rect>
+          <x>-20</x>
+          <y>-80</y>
+          <width>821</width>
+          <height>571</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string/>
+        </property>
+        <property name="pixmap">
+         <pixmap>../../Untitled-11.png</pixmap>
+        </property>
+       </widget>
+       <zorder>label_13</zorder>
+       <zorder>label_14</zorder>
+       <zorder>Ajout_Mag_btn</zorder>
+       <zorder>verticalLayoutWidget_12</zorder>
+       <zorder>verticalLayoutWidget_11</zorder>
+       <zorder>Ajout_Mag_btn_2</zorder>
       </widget>
       <widget class="QWidget" name="Modif_Mag">
        <attribute name="title">
@@ -227,6 +265,26 @@
          <string>Modifier</string>
         </property>
        </widget>
+       <widget class="QLabel" name="label_16">
+        <property name="geometry">
+         <rect>
+          <x>-20</x>
+          <y>-80</y>
+          <width>821</width>
+          <height>571</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string/>
+        </property>
+        <property name="pixmap">
+         <pixmap>../../Untitled-11.png</pixmap>
+        </property>
+       </widget>
+       <zorder>label_16</zorder>
+       <zorder>verticalLayoutWidget_2</zorder>
+       <zorder>verticalLayoutWidget</zorder>
+       <zorder>Modif_Mag_btn</zorder>
       </widget>
       <widget class="QWidget" name="tab">
        <attribute name="title">
@@ -279,6 +337,26 @@
          </item>
         </layout>
        </widget>
+       <widget class="QLabel" name="label_17">
+        <property name="geometry">
+         <rect>
+          <x>-20</x>
+          <y>-80</y>
+          <width>821</width>
+          <height>571</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string/>
+        </property>
+        <property name="pixmap">
+         <pixmap>../../Untitled-11.png</pixmap>
+        </property>
+       </widget>
+       <zorder>label_17</zorder>
+       <zorder>Supp_Mag_btn</zorder>
+       <zorder>verticalLayoutWidget_13</zorder>
+       <zorder>verticalLayoutWidget_14</zorder>
       </widget>
       <widget class="QWidget" name="tab_2">
        <attribute name="title">
@@ -307,6 +385,25 @@
          <string>Enregistrer en pdf</string>
         </property>
        </widget>
+       <widget class="QLabel" name="label_18">
+        <property name="geometry">
+         <rect>
+          <x>-20</x>
+          <y>-80</y>
+          <width>821</width>
+          <height>571</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string/>
+        </property>
+        <property name="pixmap">
+         <pixmap>../../Untitled-11.png</pixmap>
+        </property>
+       </widget>
+       <zorder>label_18</zorder>
+       <zorder>tableView</zorder>
+       <zorder>pdf_btn</zorder>
       </widget>
       <widget class="QWidget" name="tab_3">
        <attribute name="title">
@@ -376,7 +473,46 @@
           <string>Quitter</string>
          </property>
         </widget>
+        <widget class="QLabel" name="label_19">
+         <property name="geometry">
+          <rect>
+           <x>-40</x>
+           <y>-100</y>
+           <width>821</width>
+           <height>571</height>
+          </rect>
+         </property>
+         <property name="text">
+          <string/>
+         </property>
+         <property name="pixmap">
+          <pixmap>../../Untitled-11.png</pixmap>
+         </property>
+        </widget>
+        <zorder>label_19</zorder>
+        <zorder>tableView_tri</zorder>
+        <zorder>pushButton_TriASC</zorder>
+        <zorder>pushButton_TriDESC</zorder>
+        <zorder>pushButton_3</zorder>
        </widget>
+       <widget class="QLabel" name="label_23">
+        <property name="geometry">
+         <rect>
+          <x>-20</x>
+          <y>-80</y>
+          <width>821</width>
+          <height>571</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string/>
+        </property>
+        <property name="pixmap">
+         <pixmap>../../Untitled-11.png</pixmap>
+        </property>
+       </widget>
+       <zorder>label_23</zorder>
+       <zorder>groupBox_5</zorder>
       </widget>
       <widget class="QWidget" name="tab_4">
        <attribute name="title">
@@ -424,16 +560,36 @@
          </rect>
         </property>
        </widget>
+       <widget class="QLabel" name="label_20">
+        <property name="geometry">
+         <rect>
+          <x>-20</x>
+          <y>-80</y>
+          <width>821</width>
+          <height>571</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string/>
+        </property>
+        <property name="pixmap">
+         <pixmap>../../Untitled-11.png</pixmap>
+        </property>
+       </widget>
+       <zorder>label_20</zorder>
+       <zorder>lineEdit_rechercher</zorder>
+       <zorder>rechercher</zorder>
+       <zorder>tableView_rechercher</zorder>
       </widget>
       <widget class="QWidget" name="tab_5">
        <attribute name="title">
         <string>Statistique</string>
        </attribute>
-       <widget class="QPushButton" name="pushButton_6">
+       <widget class="QPushButton" name="pushButton_7">
         <property name="geometry">
          <rect>
-          <x>200</x>
-          <y>100</y>
+          <x>210</x>
+          <y>320</y>
           <width>151</width>
           <height>23</height>
          </rect>
@@ -445,8 +601,61 @@
          <string>afficher stat</string>
         </property>
        </widget>
+       <widget class="QLabel" name="label_21">
+        <property name="geometry">
+         <rect>
+          <x>-20</x>
+          <y>-80</y>
+          <width>821</width>
+          <height>571</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string/>
+        </property>
+        <property name="pixmap">
+         <pixmap>../../Untitled-11.png</pixmap>
+        </property>
+       </widget>
+       <zorder>label_21</zorder>
+       <zorder>pushButton_7</zorder>
       </widget>
      </widget>
+     <widget class="QLabel" name="label_15">
+      <property name="geometry">
+       <rect>
+        <x>0</x>
+        <y>-30</y>
+        <width>821</width>
+        <height>571</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="pixmap">
+       <pixmap>../../Untitled-11.png</pixmap>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_22">
+      <property name="geometry">
+       <rect>
+        <x>0</x>
+        <y>-20</y>
+        <width>821</width>
+        <height>571</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="pixmap">
+       <pixmap>../../Untitled-11.png</pixmap>
+      </property>
+     </widget>
+     <zorder>label_22</zorder>
+     <zorder>label_15</zorder>
+     <zorder>Tabs_Mag</zorder>
     </widget>
     <widget class="QWidget" name="Magasin">
      <attribute name="title">
@@ -455,7 +664,7 @@
      <widget class="QTabWidget" name="Tabs_Clts">
       <property name="geometry">
        <rect>
-        <x>20</x>
+        <x>30</x>
         <y>30</y>
         <width>701</width>
         <height>431</height>
@@ -465,7 +674,7 @@
        <enum>QTabWidget::Triangular</enum>
       </property>
       <property name="currentIndex">
-       <number>3</number>
+       <number>0</number>
       </property>
       <property name="tabsClosable">
        <bool>false</bool>
@@ -581,6 +790,26 @@
          </item>
         </layout>
        </widget>
+       <widget class="QLabel" name="label_4">
+        <property name="geometry">
+         <rect>
+          <x>-30</x>
+          <y>-80</y>
+          <width>821</width>
+          <height>571</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string/>
+        </property>
+        <property name="pixmap">
+         <pixmap>../../Untitled-11.png</pixmap>
+        </property>
+       </widget>
+       <zorder>label_4</zorder>
+       <zorder>on_Ajout_Mag_btn_5_clicked</zorder>
+       <zorder>verticalLayoutWidget_15</zorder>
+       <zorder>verticalLayoutWidget_16</zorder>
       </widget>
       <widget class="QWidget" name="Modif_Mag_5">
        <attribute name="title">
@@ -624,8 +853,8 @@
          <rect>
           <x>50</x>
           <y>40</y>
-          <width>71</width>
-          <height>331</height>
+          <width>806</width>
+          <height>739</height>
          </rect>
         </property>
         <layout class="QVBoxLayout" name="Magasin_inputs_28">
@@ -693,6 +922,26 @@
          <string>Modifier</string>
         </property>
        </widget>
+       <widget class="QLabel" name="label_6">
+        <property name="geometry">
+         <rect>
+          <x>-30</x>
+          <y>-80</y>
+          <width>821</width>
+          <height>571</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string/>
+        </property>
+        <property name="pixmap">
+         <pixmap>../../Untitled-11.png</pixmap>
+        </property>
+       </widget>
+       <zorder>label_6</zorder>
+       <zorder>verticalLayoutWidget_9</zorder>
+       <zorder>verticalLayoutWidget_10</zorder>
+       <zorder>Modif_Mag_btn_5</zorder>
       </widget>
       <widget class="QWidget" name="tab_21">
        <attribute name="title">
@@ -745,6 +994,26 @@
          </item>
         </layout>
        </widget>
+       <widget class="QLabel" name="label_7">
+        <property name="geometry">
+         <rect>
+          <x>-30</x>
+          <y>-80</y>
+          <width>821</width>
+          <height>571</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string/>
+        </property>
+        <property name="pixmap">
+         <pixmap>../../Untitled-11.png</pixmap>
+        </property>
+       </widget>
+       <zorder>label_7</zorder>
+       <zorder>Supp_Mag_btn_5</zorder>
+       <zorder>verticalLayoutWidget_29</zorder>
+       <zorder>verticalLayoutWidget_30</zorder>
       </widget>
       <widget class="QWidget" name="tab_22">
        <attribute name="title">
@@ -773,25 +1042,347 @@
          <string>Enregistrer en pdf</string>
         </property>
        </widget>
+       <widget class="QLabel" name="label_8">
+        <property name="geometry">
+         <rect>
+          <x>-30</x>
+          <y>-80</y>
+          <width>821</width>
+          <height>571</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string/>
+        </property>
+        <property name="pixmap">
+         <pixmap>../../Untitled-11.png</pixmap>
+        </property>
+       </widget>
+       <zorder>label_8</zorder>
+       <zorder>tableView_5</zorder>
+       <zorder>pdf_btn_5</zorder>
+      </widget>
+      <widget class="QWidget" name="tab_6">
+       <attribute name="title">
+        <string>Contacter</string>
+       </attribute>
+       <widget class="QPushButton" name="pushButton">
+        <property name="geometry">
+         <rect>
+          <x>280</x>
+          <y>290</y>
+          <width>131</width>
+          <height>28</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>Envoyer un email</string>
+        </property>
+       </widget>
+       <widget class="QLabel" name="label_9">
+        <property name="geometry">
+         <rect>
+          <x>-30</x>
+          <y>-80</y>
+          <width>821</width>
+          <height>571</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string/>
+        </property>
+        <property name="pixmap">
+         <pixmap>../../Untitled-11.png</pixmap>
+        </property>
+       </widget>
+       <zorder>label_9</zorder>
+       <zorder>pushButton</zorder>
       </widget>
       <widget class="QWidget" name="tab_23">
        <attribute name="title">
         <string>Tri</string>
        </attribute>
+       <widget class="QGroupBox" name="groupBox_6">
+        <property name="geometry">
+         <rect>
+          <x>30</x>
+          <y>30</y>
+          <width>601</width>
+          <height>331</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">color: rgb(0, 0, 0);</string>
+        </property>
+        <property name="title">
+         <string>Trier</string>
+        </property>
+        <widget class="QTableView" name="tableView_tri_2">
+         <property name="geometry">
+          <rect>
+           <x>20</x>
+           <y>80</y>
+           <width>461</width>
+           <height>191</height>
+          </rect>
+         </property>
+        </widget>
+        <widget class="QPushButton" name="pushButton_TriASC_2">
+         <property name="geometry">
+          <rect>
+           <x>40</x>
+           <y>30</y>
+           <width>93</width>
+           <height>28</height>
+          </rect>
+         </property>
+         <property name="text">
+          <string>Tri ASC</string>
+         </property>
+        </widget>
+        <widget class="QPushButton" name="pushButton_TriDESC_2">
+         <property name="geometry">
+          <rect>
+           <x>180</x>
+           <y>30</y>
+           <width>93</width>
+           <height>28</height>
+          </rect>
+         </property>
+         <property name="text">
+          <string>Tri DESC</string>
+         </property>
+        </widget>
+        <widget class="QPushButton" name="pushButton_4">
+         <property name="geometry">
+          <rect>
+           <x>490</x>
+           <y>290</y>
+           <width>93</width>
+           <height>28</height>
+          </rect>
+         </property>
+         <property name="text">
+          <string>Quitter</string>
+         </property>
+        </widget>
+        <widget class="QLabel" name="label_10">
+         <property name="geometry">
+          <rect>
+           <x>-60</x>
+           <y>-110</y>
+           <width>821</width>
+           <height>571</height>
+          </rect>
+         </property>
+         <property name="text">
+          <string/>
+         </property>
+         <property name="pixmap">
+          <pixmap>../../Untitled-11.png</pixmap>
+         </property>
+        </widget>
+        <zorder>label_10</zorder>
+        <zorder>tableView_tri_2</zorder>
+        <zorder>pushButton_TriASC_2</zorder>
+        <zorder>pushButton_TriDESC_2</zorder>
+        <zorder>pushButton_4</zorder>
+       </widget>
+       <widget class="QLabel" name="label_24">
+        <property name="geometry">
+         <rect>
+          <x>-30</x>
+          <y>-80</y>
+          <width>821</width>
+          <height>571</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string/>
+        </property>
+        <property name="pixmap">
+         <pixmap>../../Untitled-11.png</pixmap>
+        </property>
+       </widget>
+       <zorder>label_24</zorder>
+       <zorder>groupBox_6</zorder>
       </widget>
       <widget class="QWidget" name="tab_24">
        <attribute name="title">
         <string>Recherche</string>
        </attribute>
+       <widget class="QLineEdit" name="lineEdit_rechercher_3">
+        <property name="geometry">
+         <rect>
+          <x>50</x>
+          <y>60</y>
+          <width>113</width>
+          <height>22</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string/>
+        </property>
+        <property name="maxLength">
+         <number>8</number>
+        </property>
+       </widget>
+       <widget class="QPushButton" name="rechercher_3">
+        <property name="geometry">
+         <rect>
+          <x>170</x>
+          <y>50</y>
+          <width>93</width>
+          <height>31</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">color: rgb(0, 0, 0);</string>
+        </property>
+        <property name="text">
+         <string>Rechercher</string>
+        </property>
+       </widget>
+       <widget class="QTableView" name="tableView_rechercher_3">
+        <property name="geometry">
+         <rect>
+          <x>40</x>
+          <y>100</y>
+          <width>451</width>
+          <height>192</height>
+         </rect>
+        </property>
+       </widget>
+       <widget class="QLabel" name="label_11">
+        <property name="geometry">
+         <rect>
+          <x>-30</x>
+          <y>-80</y>
+          <width>821</width>
+          <height>571</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string/>
+        </property>
+        <property name="pixmap">
+         <pixmap>../../Untitled-11.png</pixmap>
+        </property>
+       </widget>
+       <zorder>label_11</zorder>
+       <zorder>lineEdit_rechercher_3</zorder>
+       <zorder>rechercher_3</zorder>
+       <zorder>tableView_rechercher_3</zorder>
       </widget>
       <widget class="QWidget" name="tab_25">
        <attribute name="title">
         <string>Statistique</string>
        </attribute>
+       <widget class="QPushButton" name="pushButton_6">
+        <property name="geometry">
+         <rect>
+          <x>240</x>
+          <y>300</y>
+          <width>151</width>
+          <height>23</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">color: rgb(0, 0, 0);</string>
+        </property>
+        <property name="text">
+         <string>afficher stat</string>
+        </property>
+       </widget>
+       <widget class="QLabel" name="label_12">
+        <property name="geometry">
+         <rect>
+          <x>-30</x>
+          <y>-80</y>
+          <width>821</width>
+          <height>571</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string/>
+        </property>
+        <property name="pixmap">
+         <pixmap>../../Untitled-11.png</pixmap>
+        </property>
+       </widget>
+       <zorder>label_12</zorder>
+       <zorder>pushButton_6</zorder>
       </widget>
      </widget>
+     <widget class="QLabel" name="label_3">
+      <property name="geometry">
+       <rect>
+        <x>0</x>
+        <y>-30</y>
+        <width>791</width>
+        <height>571</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="pixmap">
+       <pixmap>../../Untitled-11.png</pixmap>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_5">
+      <property name="geometry">
+       <rect>
+        <x>-10</x>
+        <y>-30</y>
+        <width>821</width>
+        <height>571</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="pixmap">
+       <pixmap>../../Untitled-11.png</pixmap>
+      </property>
+     </widget>
+     <zorder>label_5</zorder>
+     <zorder>label_3</zorder>
+     <zorder>Tabs_Clts</zorder>
     </widget>
    </widget>
+   <widget class="QLabel" name="label">
+    <property name="geometry">
+     <rect>
+      <x>670</x>
+      <y>0</y>
+      <width>56</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_2">
+    <property name="geometry">
+     <rect>
+      <x>5</x>
+      <y>0</y>
+      <width>791</width>
+      <height>571</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="pixmap">
+     <pixmap>../../Untitled-11.png</pixmap>
+    </property>
+   </widget>
+   <zorder>label_2</zorder>
+   <zorder>tabWidget</zorder>
+   <zorder>label</zorder>
   </widget>
   <widget class="QMenuBar" name="menubar">
    <property name="geometry">

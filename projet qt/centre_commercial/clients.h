@@ -1,3 +1,5 @@
+
+
 #ifndef CLIENTS_H
 #define CLIENTS_H
 #include <QString>
@@ -17,6 +19,9 @@ private:
     QString email;
     int num_tel;
     int pts_fid;
+
+
+
 
     //int,QString,QString,QString,QString,int,int
 

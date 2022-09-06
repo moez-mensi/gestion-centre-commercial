@@ -4,8 +4,7 @@
 #include <QSqlQuery>
 #include <QSqlDatabase>
 #include <QSqlQueryModel>
-
-
+#include <QTableWidget>
 
 class Magasins
 {
@@ -37,6 +36,12 @@ public:
     bool Modifier(int,QString,QString,QString);
     bool Supprimer(int);
     QSqlQueryModel* Afficher();
+
+    QSqlQueryModel *trierAc2();
+    QSqlQueryModel * trierDec2();
+    QSqlQueryModel * rechercher_mag(int id);
+
+
 
 };
 

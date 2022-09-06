@@ -2,6 +2,9 @@
 #include "stat_combo.h"
 #include "ui_stat_combo.h"
 
+
+
+
 Clients::Clients()
 {
 
@@ -173,10 +176,10 @@ bool Clients::Modifier(int id,QString nom,QString prenom,QString sexe,QString em
       q1.prepare("SELECT * FROM clients");
       q1.exec();
 
-      q2.prepare("SELECT * FROM clients WHERE (pts_fid!=0)");
+      q2.prepare("SELECT * FROM clients WHERE (sexe='male')");
       q2.exec();
 
-      q3.prepare("SELECT * FROM clients where(pts_fid=0)");
+      q3.prepare("SELECT * FROM clients where (sexe='femelle')");
       q3.exec();
 
 
@@ -189,8 +192,8 @@ bool Clients::Modifier(int id,QString nom,QString prenom,QString sexe,QString em
 
       // Define slices and percentage of whole they take up
       QPieSeries *series = new QPieSeries();
-      series->append("Spts_fid < 0",c1);
-      series->append("non pas des pts de fid",c2);
+      series->append("Male",c1);
+      series->append("Femelle",c2);
 
 
 
@@ -257,8 +260,8 @@ bool Clients::Modifier(int id,QString nom,QString prenom,QString sexe,QString em
                   QSqlQuery qry;
 
 
-                   qry.prepare("SELECT* FROM clients where id=:id");
-                   qry.bindValue(":id_SAV",res);
+                   qry.prepare("SELECT * FROM clients where id=:id");
+                   qry.bindValue(":id",res);
                    qry.exec();
                    QSqlQueryModel *model= new QSqlQueryModel;
               model->setQuery(qry);

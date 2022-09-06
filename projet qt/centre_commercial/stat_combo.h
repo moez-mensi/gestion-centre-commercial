@@ -22,6 +22,7 @@ class stat_combo;
 }
 
 class stat_combo : public QDialog
+
 {
     Q_OBJECT
 
@@ -32,6 +33,7 @@ public:
     QChartView *chartView ;
     void choix_bar();
     void choix_pie();
+    void choix_pie_mag();
 
 private:
     Ui::stat_combo *ui;
